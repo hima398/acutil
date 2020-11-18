@@ -18,7 +18,7 @@ func NewScanner(r io.Reader) *Scanner {
 	return &Scanner{sc}
 }
 
-func (s Scanner) nextInt() int {
+func (s *Scanner) nextInt() int {
 	s.sc.Scan()
 	i, _ := strconv.Atoi(s.sc.Text())
 	return i
